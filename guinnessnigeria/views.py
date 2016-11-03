@@ -35,7 +35,7 @@ class Index(generic_views.TemplateView):
         context['press_releases'] = news_and_media_models.PressRelease.permitted.all()[:2]
         context['brands'] = [brand_category_through.brand for brand_category_through in
             brand_models.BrandCategoryThrough.objects.filter(brand_category__slug='carousel')]  # noqa
-        context['stock_ticker'] = preferences.SitePreferences.active_stock_ticker
+        # context['stock_ticker'] = preferences.SitePreferences.active_stock_ticker
         context['stock_reports'] = investor_models.FinancialReport.objects.all()[:5]
         return context
 

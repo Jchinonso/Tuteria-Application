@@ -1,15 +1,18 @@
 django==1.5
+-e git+https://github.com/unomena/unobase.git#egg=unobase
+django-evolution
+django-environ==0.4.0
+django-photologue==2.7
+Pillow
+django-preferences
+python-memcached
+python_dateutil==2.1
+South
 gunicorn
 django-honeypot
 flufl.password
 django-guardian
-python_dateutil==2.1
-django-evolution
-django-ckeditor
-django-preferences
-django-photologue==2.7
--e git+https://github.com/unomena/unobase.git#egg=unobase
-Pillow
-python-memcached
-South
-django-environ==0.4.0
+django-ckeditor==3.6.2.1
+
+
+

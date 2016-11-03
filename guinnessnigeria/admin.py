@@ -43,3 +43,28 @@ admin.site.register(FlatPage, FlatPageAdmin)
 admin.site.register(models.SitePreferences, PreferencesAdmin)
 admin.site.register(models.FrontPageBanner, FrontPageBannerAdmin)
 admin.site.register(models.SocialMedia)
+
+
+# # Unregister irrelevant models
+
+# from photologue import models as photologue_models  # noqa
+
+# admin.site.unregister(photologue_models.Gallery)
+# admin.site.unregister(photologue_models.GalleryUpload)
+# admin.site.unregister(photologue_models.PhotoEffect)
+# admin.site.unregister(photologue_models.Photo)
+# admin.site.unregister(photologue_models.Watermark)
+
+# # from django_evolution import models as evolution_models
+
+# # admin.site.unregister(evolution_models.Evolution)
+# # admin.site.unregister(evolution_models.Version)
+
+# from unobase import models as unobase_models  # noqa
+
+# admin.site.unregister(unobase_models.DefaultImage)
+# admin.site.unregister(unobase_models.TagModel)
+
+# from unobase.tagging import models as tagging_models  # noqa
+
+# admin.site.unregister(tagging_models.Tag)

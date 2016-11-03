@@ -14,7 +14,7 @@
         </div>
 		{% for object in object_list %}
 			<div class="listing pub">
-				<a href="{% url news_and_media_press_releases_detail object.pk %}">
+				<a href="{% url "news_and_media_press_releases_detail" object.pk %}">
 	                <span>{{ object.publish_date_time|date:"j M Y" }}</span>
 	                <strong>{{ object.title }}</strong>
                 </a>

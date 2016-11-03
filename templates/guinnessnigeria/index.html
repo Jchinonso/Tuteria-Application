@@ -1,5 +1,4 @@
- 
-{% extends 'base.html' %}
+ {% extends 'base.html' %}
 {% load poll_widgets %}
 
 {% block content %}
@@ -22,11 +21,11 @@
 
     <div id="brands">
         <div class="container">
-            <h2>Our Brands<a href="{% url brand_list 'all' %}">View Our Brands Section &raquo;</a></h2>
+            <h2>Our Brands<a href="{% url "brand_list" 'all' %}">View Our Brands Section &raquo;</a></h2>
             <ul>
                 {% for brand in brands %}
                     <li>
-                        <a href="{% url brand_detail brand.slug %}"><img src="{{ brand.get_41x142_url }}" /><br />{{ brand.title }}</a>
+                        <a href="{% url "brand_detail" brand.slug %}"><img src="{{ brand.get_41x142_url }}" /><br />{{ brand.title }}</a>
                     </li>
                 {% empty %}
                     <li>Please add brands via the admin.</li>
@@ -46,7 +45,10 @@
                 <h2>Investor Centre</h2>
                 <div class="stock">
                     <p class="stock_code"><strong>NSE:</strong> Guinness</p>
-                    <p class="stock_price"><span>{{ stock_ticker.current_stock_value|floatformat:"2" }}</span> | <span class="{{ stock_ticker.percentage_difference_color }}">{{ stock_ticker.percentage_difference|floatformat:"2" }}%</span></p>
+                    <p class="stock_price">
+                        <span>{{ stock_ticker.current_stock_value|floatformat:"2" }}</span> | 
+                        <span class="{{ stock_ticker.percentage_difference_color }}">{{ stock_ticker.percentage_difference|floatformat:"2" }}%</span>
+                    </p>
                     <p class="stock_update">Updated: {{ stock_ticker.last_updated|date:"j M Y" }}</p>
                 </div>
                 <ul class="reports">
@@ -59,7 +61,7 @@
             </div>
             <div class="third">
                 <h2>Opinion Poll</h2>
-                {% poll %}
+                {#{% poll %}#}
             </div>
             <div class="clear"></div>
         </div>
