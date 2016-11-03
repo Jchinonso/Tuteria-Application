@@ -1,4 +1,4 @@
-# Django settings for website project.
+# Django settings for src project.
 import os
 
 
@@ -136,10 +136,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
-ROOT_URLCONF = 'website.urls'
+ROOT_URLCONF = 'src.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'website.wsgi.application'
+WSGI_APPLICATION = 'src.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
